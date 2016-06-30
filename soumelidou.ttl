@@ -1,0 +1,33 @@
+@prefix ks: <http://dilab77.ionio.gr/swp/soumelidou/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+ks:Teacher: rdf:type rdfs:Class;
+              rdfs:subClassof foaf:Person .
+ks:Lecture: rdf:type rdfs:Class .
+ks:Classroom: rdf:type rdfs:Class .
+ks:Course: rdf:type rdfs:Class .
+
+               
+ks:Καθηγητής: rdf:type rdf:Property;
+        rdfs:domain ks:Lecture;
+        rdfs:range ks:Teacher .
+ks:Αίθουσα: rdf:type rdf:Property;
+        rdfs:domain ks:Lecture;
+        rdfs:range ks:Classroom .
+ks:Μάθημα: rdf:type rdf:Property;
+        rdfs:domain ks:Lecture;
+        rdfs:range ks:Course .
+ks:Ώρα%20έναρξης: rdf:type rdf:Property;
+        rdfs:domain ks:Lecture;  
+        rdfs:range xsd:time .
+ks:Ώρα%20λήξης: rdf:type rdf:Property;
+        rdfs:domain ks:Lecture;
+        rdfs:range xsd:time .
+ks:Ημέρα: rdf:type rdf:Property;
+        rdfs:domain rdf:Lecture;
+        rdfs:range xsd:string .
+ks:Εξάμηνο: rdf:type rdf:Property;
+        rdfs:domain rdf:Lecture;
+        rdfs:range xsd:string .
